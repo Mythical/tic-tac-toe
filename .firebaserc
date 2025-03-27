@@ -4,6 +4,20 @@
     "staging": "tic-tac-toe-staging",
     "production": "tic-tac-toe-production-8256b"
   },
-  "targets": {},
+  "targets": {
+    "tic-tac-toe-testing-ee653": {
+      "hosting": {
+        "testing": [
+          "tic-tac-toe-testing-ee653"
+        ],
+        "staging": [
+          "tic-tac-toe-staging"
+        ],
+        "production": [
+          "tic-tac-toe-production-8256b"
+        ]
+      }
+    }
+  },
   "etags": {}
 }
