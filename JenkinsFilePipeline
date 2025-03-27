@@ -4,6 +4,39 @@ pipeline {
             image 'node:18.17.1-alpine3.18'
         }
     }
+
+    stages {
+        stage('Building') {
+            steps {
+                sh 'npm install -g firebase-tools'
+            }
+        }
+
+        stage('Testing') {
+            steps {
+                sh 'firebase deploy --only hosting:testing --token "1//06BNv256qu9n7CgYIARAAGAYSNwF-L9Ir9B6gfTM1ADBmrWcGMEz7iy15X1zqBeUeMv9rkKbOEwJNImur9ngFaFTkJSsT4U-jdPU"'
+            }
+        }
+
+        stage('Staging') {
+            steps {
+                sh 'firebase deploy --only hosting:staging --token "1//06BNv256qu9n7CgYIARAAGAYSNwF-L9Ir9B6gfTM1ADBmrWcGMEz7iy15X1zqBeUeMv9rkKbOEwJNImur9ngFaFTkJSsT4U-jdPU"'
+            }
+        }
+
+        stage('Production') {
+            steps {
+                sh 'firebase deploy --only hosting:production --token "1//06BNv256qu9n7CgYIARAAGAYSNwF-L9Ir9B6gfTM1ADBmrWcGMEz7iy15X1zqBeUeMv9rkKbOEwJNImur9ngFaFTkJSsT4U-jdPU"'
+            }
+        }
+    }
+}
+pipeline {
+    agent {
+        docker {
+            image 'node:18.17.1-alpine3.18'
+        }
+    }
     environment {
         FIREBASE_DEPLOY_TOKEN = credentials('firebase-token')
     }
