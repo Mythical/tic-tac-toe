@@ -1,6 +1,6 @@
 {
   "projects": {
-    "default": "tic-tac-toe-production-8256b",
+    "default": "tic-tac-toe-testing-ee653",
     "staging": "tic-tac-toe-staging",
     "production": "tic-tac-toe-production-8256b"
   },
@@ -9,15 +9,23 @@
       "hosting": {
         "testing": [
           "tic-tac-toe-testing-ee653"
-        ],
+        ]
+      }
+    },
+    "tic-tac-toe-staging": {
+      "hosting": {
         "staging": [
           "tic-tac-toe-staging"
-        ],
+        ]
+      }
+    },
+    "tic-tac-toe-production-8256b": {
+      "hosting": {
         "production": [
           "tic-tac-toe-production-8256b"
         ]
       }
     }
-  },
-  "etags": {}
+  }
 }
+
