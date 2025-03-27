@@ -1,0 +1,13 @@
+{
+  "projects": {
+    "default": "tic-tac-toe-testing",
+    "testing": "tic-tac-toe-testing",
+    "staging": "tic-tac-toe-staging",
+    "production": "tic-tac-toe-production"
+  }
+}
+{
+  "projects": {
+    "default": "tic-tac-toe-testing-ee653"
+  }
+}
